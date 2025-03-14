@@ -3,30 +3,24 @@
 namespace NumberTricks
 {
 
-public class NumberUtilts
-{
-		private int n, num;
-	public NumberUtilts(int n, int num)
+public class NumberTricks
+    {
+		
+	public NumberTricks()
 	{
-		this.n = n;
-            this.num = num;
-        }
-
-		public double NRoothBabylon(int n, int num)
-		{
-			double ans = num;
-			double end = 0;
-			double doKolko = 0.000001;
-			double mnogo = double.MaxValue; ;
-            while(mnogo> doKolko)
-			{
-				double prev = ans;
-				ans = ((n-1) * ans+ num/Math.Pow(ans, n-1))/n;
-                mnogo = Math.Abs(ans - prev);
+		
+    }
+        public static double FastPow(double a, int n)
+        {
+            if (n == 0)
+            {
+                return 1;
             }
-
-			return ans;
+            double halfPowered = FastPow(a, n / 2);
+            double subTotal = halfPowered * halfPowered;
+            return n % 2 == 0 ? subTotal : subTotal * a;
         }
-} 
+
+    } 
 
 }

@@ -10,6 +10,7 @@ namespace NumberTricks
         {
 
         }
+
         public static double FastPow(double a, int n)
         {
             if (n == 0)
@@ -34,7 +35,24 @@ namespace NumberTricks
                 mnogo = Math.Abs(ans - prev);
 
             }
-			return ans;}
+            return ans;
+        }
+        
+
+   public void Deliteli(int num)
+        {
+            List<int> lis = new List<int>();
+            for (int i = 1; i <= num; i++)
+            {
+                if (num % i == 0 && !lis.Contains(i) && !lis.Contains(num/i))
+                {
+                    lis.Add(i);
+                    lis.Add(num / i);
+                }
+            }
+            lis.Sort();
+            Console.WriteLine(string.Join(" ", lis));
         }
 
+    }
 }

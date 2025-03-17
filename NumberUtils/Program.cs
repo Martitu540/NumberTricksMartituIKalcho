@@ -1,4 +1,6 @@
-﻿namespace NumberTricks
+﻿using System;
+
+namespace NumberTricks
 {
     internal class Program
     {
@@ -7,7 +9,9 @@
             Console.WriteLine(NumberTricks.FastPow(2,11));
             NumberTricks tricks = new NumberTricks();
             tricks.DrawCircle(10);
-            
+            tricks.PrintPascalsTriangle(10);
+
+
 
         }
     }

@@ -26,7 +26,7 @@
             }
             return ans;
         }
-        public void DrawFCircle(int radius)
+        public void DrawCircle(int radius)
         {
             for (int y = -radius; y <= radius; y++)
             {

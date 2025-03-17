@@ -5,6 +5,9 @@
         static void Main(string[] args)
         {
             Console.WriteLine(NumberTricks.FastPow(2,11));
+            NumberTricks tricks = new NumberTricks();
+            tricks.DrawCircleConsole(10);
+
         }
     }
 }

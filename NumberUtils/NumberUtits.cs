@@ -26,28 +26,26 @@
             }
             return ans;
         }
-        public void DrawCircleConsole(int radius)
+        public void DrawFilledCircleConsole(int radius)
         {
-            int diameter = 2 * radius; 
-            double threshold = 0.8;
-
             for (int y = -radius; y <= radius; y++)
             {
                 for (int x = -radius; x <= radius; x++)
                 {
                     double distance = Math.Sqrt(x * x + y * y);
 
-                    if (Math.Abs(distance - radius) < threshold)
+                    if (distance <= radius) 
                     {
-                        Console.Write("*"); 
+                        Console.Write("*");
                     }
                     else
                     {
-                        Console.Write(" "); 
+                        Console.Write(" ");
                     }
                 }
-                Console.WriteLine(); 
+                Console.WriteLine();
             }
         }
     }
 }
+        

@@ -6,7 +6,7 @@
         {
             Console.WriteLine(NumberTricks.FastPow(2,11));
             NumberTricks tricks = new NumberTricks();
-            tricks.DrawFilledCircleConsole(10);
+            tricks.DrawFCircle(10);
 
         }
     }

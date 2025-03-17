@@ -26,7 +26,7 @@
             }
             return ans;
         }
-        public void DrawFilledCircleConsole(int radius)
+        public void DrawFCircle(int radius)
         {
             for (int y = -radius; y <= radius; y++)
             {

@@ -8,6 +8,10 @@
 
             NumberTricks num = new NumberTricks();
             num.PrintPascalsTriangle(10);
+            NumberTricks tricks = new NumberTricks();
+            tricks.DrawCircle(10);
+            
+
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using System;
-
-namespace NumberTricks
+﻿namespace NumberTricks
 {
+    public class NumberTricks
+    {
+        public NumberTricks() { }
+
 
     public class NumberUtilts
     {
@@ -10,6 +12,14 @@ namespace NumberTricks
         {
             this.n = n;
             this.num = num;
+
+        public static double FastPow(double a, int n)
+        {
+            if (n == 0) return 1;
+            double halfPowered = FastPow(a, n / 2);
+            double subTotal = halfPowered * halfPowered;
+            return n % 2 == 0 ? subTotal : subTotal * a;
+
         }
 
         public double NRoothBabylon(int n, int num)
@@ -23,9 +33,28 @@ namespace NumberTricks
                 double prev = ans;
                 ans = ((n - 1) * ans + num / Math.Pow(ans, n - 1)) / n;
                 mnogo = Math.Abs(ans - prev);
+
+            }
+
+            return ans; }
+    
+     public void PrintPascalsTriangle(int rows)
+        {
+            for (int i = 0; i < rows; i++)
+            {
+                int number = 1;
+                Console.Write(new string(' ', (rows - i) * 2));
+
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write(number + "   ");
+                    number = number * (i - j) / (j + 1);
+                }
+                Console.WriteLine();
             }
 
             return ans;
+
         }
         public static void SieveOfEratosthenes(int m)
         {
@@ -54,3 +83,33 @@ namespace NumberTricks
         }
     }
 }
+
+
+        }
+   
+        public void DrawCircle(int radius)
+        {
+            for (int y = -radius; y <= radius; y++)
+            {
+                for (int x = -radius; x <= radius; x++)
+                {
+                    double distance = Math.Sqrt(x * x + y * y);
+
+
+                 } 
+            }
+                    if (distance <= radius) 
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+        
